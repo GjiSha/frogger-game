@@ -1,0 +1,14 @@
+{
+    "frogImageUrl": "https://cdn.britannica.com/49/182849-050-4C7FE34F/scene-Iron-Man.jpg",
+    "obstacleWords": ["alpha", "bravo", "charlie","Delta"],
+    "frogStep": 50,
+    "obstacleSpawnInterval": 3000,
+    "obstacleSpeed": 3,
+    "maxObstacles": 3,
+    "gameWidth": 500,
+    "gameHeight": 600,
+    "initialFrogX": 225,
+    "initialFrogY": 510,
+    "obstacleHeight": 40
+  }
+  

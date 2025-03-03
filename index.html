@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frogger Game - Refactored</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    #gameContainer {
+      position: relative;
+      width: 500px;
+      height: 600px;
+      margin: 20px auto;
+      background: linear-gradient(to bottom, #87CEEB, #f0f8ff);
+      border: 2px solid #333;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+    #frog {
+      width: 50px;
+      height: 80px;
+      position: absolute;
+      bottom: 10px;
+      left: 225px;
+      background-image: url();
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: top 0.1s, left 0.1s;
+    }
+    .obstacle {
+      position: absolute;
+      height: 40px;
+      background-color: #e74c3c;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 5px;
+      padding: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    #winMessage {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(46, 204, 113, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <h1>Frogger-Style Game</h1>
+  <p>Use arrow keys to move. Avoid obstacles and reach the top!</p>
+  <div id="gameContainer">
+    <div id="frog"></div>
+    <div id="winMessage">🎉 You Win! 🎉</div>
+  </div>
+
+  <!-- External JavaScript file -->
+  <script src="game.js"></script>
+</body>
+</html>
