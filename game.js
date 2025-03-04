@@ -1,7 +1,6 @@
 // Global config will be loaded externally
 let config;
 
-// Load external configuration file and then initialize the game
 fetch('config.json')
   .then(response => response.json())
   .then(data => {
@@ -9,10 +8,19 @@ fetch('config.json')
     // Update frog image based on config
     const frog = document.getElementById('frog');
     frog.style.backgroundImage = `url('${config.frogImageUrl}')`;
+    // Update game background image if provided
+    const gameContainer = document.getElementById('gameContainer');
+if (config.backgroundImage) {
+  gameContainer.style.backgroundImage = `url('${config.backgroundImage}')`;
+  gameContainer.style.backgroundSize = 'cover';
+  gameContainer.style.backgroundPosition = 'center';
+}
+
     // Now initialize the game using the loaded config
     FroggerGame.init();
   })
   .catch(err => console.error('Error loading configuration:', err));
+
 
 // The game logic object uses the externally loaded config
 const FroggerGame = {
